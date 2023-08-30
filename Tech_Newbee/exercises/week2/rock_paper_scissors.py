@@ -1,20 +1,33 @@
 """
-Implementation of rock, paper, scissors by Kylie Ying
+Implementation of rock, paper, scissors
 
-YouTube Kylie Ying: https://www.youtube.com/ycubed 
-Twitch KylieYing: https://www.twitch.tv/kylieying 
-Twitter @kylieyying: https://twitter.com/kylieyying 
-Instagram @kylieyying: https://www.instagram.com/kylieyying/ 
-Website: https://www.kylieying.com
-Github: https://www.github.com/kying18 
-Programmer Beast Mode Spotify playlist: https://open.spotify.com/playlist/4Akns5EUb3gzmlXIdsJkPs?si=qGc4ubKRRYmPHAJAIrCxVQ 
+Read through the entire program to understand what has been done and 
+what is left.
+Some lines of code have been left empty for you to fill in.
+
+In this game the user is expected to enter one of r/p/s
+r for rock
+p for paper
+s for scissors
+
+After which the computer is going to randomly select one of r/p/s
+
+After user and computer inputs have been selected we need to decide the results of the game
+
+The game is a tie/draw if both select the same thing
+The game is won if:
+- user selects p, computer selects r
+- user selects r, computer selects s
+- user selects s, computer selects p
+
+Otherwise, the game is lost.
 """
 
 import random
 
 def play():
-    user = input("What's your choice? 'r' for rock, 'p' for paper, 's' for scissors\n")
-    computer = random.choice(['r', 'p', 's'])
+    user = #get user input (r/p/s)
+    computer = #computer input
 
     if user == computer:
         return 'It\'s a tie'
@@ -28,8 +41,5 @@ def play():
 def is_win(player, opponent):
     # return true if player wins
     # r > s, s > p, p > r
-    if (player == 'r' and opponent == 's') or (player == 's' and opponent == 'p') \
-        or (player == 'p' and opponent == 'r'):
-        return True
 
 print(play())
